@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome">
+        <title>CSS 선택자</title>
+    </head>
+    <body>
+        <h1>CSS 선택자</h1>
+        <div> - 특정한 HTML 태그를 선택하여 스타일을 부여할 때 활용</div>
+        <div> - 선택자 종류: 태그, #id, .class, 후손, 자산, 이벤트 등등</div>
+
+        <h3>1. 모든 선택자</h3>
+        <div> - 모든 태그에 스타일을 적용할 때 사용(모든 태그 선택)</div>
+        <style>
+            /* css 영역 */
+            * {
+                font-family: sans-serif;
+                /* font-weight: bold;
+                color: black;
+                background-color: white; */
+            }
+        </style>
+        <hr><br>
+
+        <h3>2. 태그 선택자 **</h3>
+        <div> - 특정 태그에 스타일을 적용할 때 사용</div>
+        <style>
+            ul {
+                color: blue;
+                background-color: navajowhite;
+            }
+        </style>
+
+        <ul>ul 태그 영역입니다.</ul>
+        <li>태그 선택자 적용 라인</li>
+        <hr><br>
+
+        <h3>3. id 선택자 **</h3>
+        <div> - 특정 id 속성을 가진 태그에 스타일을 적용할 때 사용</div>
+        <div> - id와 style가 1:1로 맵핑 될 때만 사용 가능</div>
+        <div> - id는 일반적으로 javascript에서 사용되는 식별자로 가급적 css에서는 사용을 꺼림</div>
+        <style>
+            #id1 {
+                color: rgb(104, 32, 32);
+                background-color: lightgreen;
+                font-size: xx-large;
+            }
+            #id2 {
+                color: rgb(199, 235, 167);
+                background-color: lightyellow;
+                font-size: x-large;
+            }
+
+            /* id를 동시에 적용하는 방법 = ',' */
+            #id1, #id2 {
+                text-align: center;
+            }
+        </style>
+
+        <div id="id1">
+            id1 영역입니다.
+        </div>
+        <div id="id2">
+            id2 영역입니다.
+        </div>
+        <hr><br>
+
+        <h3>4. class 선택자 *****</h3>
+        <div> - HTML 태그 속성 중 class(그룹)으로 지정하여 스타일을 적용하는 방법</div>
+        <div> - 여러 태그에 동시에 적용 가능, 1:N / 1:1 매핑 가능</div>
+
+        <style>
+            .class1 {
+                color: rgb(255, 25, 255);
+                background-color: rgb(14, 30, 90);
+                font-size: 15pt;
+                text-align: center;
+            }
+            
+            /* .class2, class3을 동시에 선택하는 방법  */
+            .class2, .class3 {
+                font-weight: bold;
+                color: aquamarine;
+                font-size: 18pt;
+                text-align: center;
+            }
+
+            /*부모 - > 자식 (후손) 선택자 활용법 */
+            .classP .classC{
+                color:aliceblue;
+                background-color: black;
+                font-size: 17pt;
+            }
+            </style>
+
+        <div class="class1"> 첫번째 class1영역입니다.</div>
+        <div class="class2"> 두번째 class2영역입니다.</div>
+
+        <div class="classP">
+            부모 영역입니다.
+            <div class="classC">자식 영역입니다.</div>
+            <div>일반 자식 영역입니다.</div>
+        </div>
+        <hr><br>
+
+        
+    </body>
+</html>

@@ -1,0 +1,18 @@
+/* 이곳은 css문법만 적용 가능한 범위입니다. */
+
+/* 전체 선택자 = '*' */
+*{
+    font-weight: bold;
+}
+
+/* id 선택자 = '#' */
+#id01{
+    color: red;
+    background-color: yellow;
+}
+
+/* class 선택자 = '.' */
+.class02, .class03{ /* class02와 class03에 동일한 스타일 적용 */
+    color: blue;
+    background-color: green;
+}
