@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <script>
+        /* 별 10개 찍기 js 사용 */
+        function printStar() {
+            let star = "";
+            for (let i = 0; i < 10; i++) {
+                star += "*";
+            }
+            document.write('별을 10개 찍어보세요.' + star + '<br>');
+        }
+
+        printStar();
+        document.write('<br>');
+        
+
+        function q2() { 
+            // 기호 입력받기
+            let symbol = prompt('원하는 기호를 입력하세요.');
+            let num = prompt('원하는 숫자를 입력하세요.');
+            // num만큼 symbol을 출력
+            let result = "";
+            for (let i = 0; i < num; i++) {
+                result += symbol;
+            }
+            document.write(result);
+        }
+
+        q2();
+        document.write('<br><br>');
+
+
+        function q3() {
+            let num = prompt('증가 1, 감소 2, 종료 3을 입력해주세요.');
+            let count = 0;
+            while (num != 3) {
+                if (num == 1) {
+                    count++;
+                } else if (num == 2) {
+                    count--;
+                }
+                document.write('카운트: ' + count + '<br>');
+                num = prompt('증가 1, 감소 2, 종료 3을 입력해주세요.');
+            }
+            prompt('종료되었습니다.' + count);
+        }
+        q3();
+
+        
+    </script>
+</body>
+</html>
