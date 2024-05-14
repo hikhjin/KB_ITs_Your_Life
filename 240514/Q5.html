@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name: '에너자이자',
+            total_price: 5000,
+            discount_price: 4700,
+            isDiscount: false,
+            one_price: 2350,
+            arrive_date: '내일(수) 도착 보장',
+            rate: 50,
+            point: 188,
+            discount: function() {
+                if(this.discount_price != 0) {
+                    this.isDiscount = true;
+                } else {
+                    this.isDiscount = false;
+                }
+            },
+            // isDiscount가 true면 '할인 적용'을 출력하고, false면 '할인 미적용'을 출력한다.
+
+            print: function() {
+                if(this.isDiscount) {
+                    document.write('할인 적용<br>');
+                } else {
+                    document.write('할인 미적용<br>');
+                }
+                document.write('name: ' + this.name + '<br>');
+                document.write('total_price: ' + this.total_price + '<br>');
+                document.write('discount_price: ' + this.discount_price + '<br>');
+                document.write('one_price: ' + this.one_price + '<br>');
+                document.write('arrive_date: ' + this.arrive_date + '<br>');
+                document.write('rate: ' + this.rate + '<br>');
+                document.write('point: ' + this.point + '<br>');
+            }
+        
+        }
+
+        product.discount();
+        product.print();
+</script>
+    
+</body>
+</html>

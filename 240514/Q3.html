@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+    <script>
+        const test1 = function(a, b) {
+            return a + b;
+        }
+        
+        const test11 = (a, b) => a + b;
+        console.log(test11(10, 20));
+
+        function test2(params) {
+            console.log(params + '님 환영합니다!');
+        }
+        const test22 = params => console.log(params + '님 환영합니다!');
+        test22('홍길동');
+
+        function test3() {
+            console.log('ok');
+        }
+        const test33 = () => console.log('ok');
+        test33();
+    </script>
+    
+</body>
+</html>
