@@ -44,12 +44,38 @@
                 } else if (num == 2) {
                     count--;
                 }
-                document.write('카운트: ' + count + '<br>');
+                prompt('카운트: ' + count);
                 num = prompt('증가 1, 감소 2, 종료 3을 입력해주세요.');
             }
-            prompt('종료되었습니다.' + count);
+            document.write('종료되었습니다. 현재까지의 카운트는 ' + count + '<br><br>');
         }
         q3();
+
+        function q4() {
+            // Date를 사용해서 현재 년도 구하기
+            let date = new Date();
+            if (date.getFullYear() >= 2000) {
+                document.write('밀레니엄 세대시군요.<br>');
+            } else {
+                document.write('밀레니엄 세대가 아니시군요.<br>');
+            }
+            
+            if (date.getDay() == 6 || date.getDay() == 0) {
+                document.write('쉬자!<br>');
+            } else {
+                document.write('공부하자!<br>');
+            }
+
+            if (date.getMonth() == 1) {
+                document.write('28일까지 있습니다.');
+            } else if (date.getMonth() == 3 || date.getMonth() == 5 || date.getMonth() == 8 || date.getMonth() == 10) {
+                document.write('30일까지 있습니다.');
+            } else {
+                document.write('31일까지 있습니다.');
+            }
+        }
+
+        q4();
 
         
     </script>

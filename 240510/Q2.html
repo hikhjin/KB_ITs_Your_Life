@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <script>
+        //1차원 저장공간 15개 생성
+        let array = [0,0,0,0,0,0,0,0,0,0,0,0,0,0]; // 1인 경우, 예약 완료
+
+        let num = prompt('좌석번호 선택(1~14), 종료 0');
+        let cnt = 0;
+
+        while (num != 0) {
+            if (array[num-1] == 1) {
+                alert('이미 예약된 좌석입니다.');
+            } else {
+                array[num-1] = 1;
+                cnt++;
+            }
+            num = prompt('좌석번호 선택(1~14), 종료 0');
+        }
+        alert('예약이 종료되었습니다.');
+        // 현재 예약된 좌석 번호
+        document.write('현재 예약된 좌석 번호: ');
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == 1) {
+                document.write(i+1 + ' ');
+            }
+        }
+        document.write('<br>예매 금액은 ' + cnt*5000 + '원 입니다.');
+        
+
+    </script>
+    
+</body>
+</html>
