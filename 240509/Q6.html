@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+<body>
+    <script>
+        let name = '홍콩';
+        let price = 600000;
+        let member = 5;
+        let date = new Date().getFullYear() + '년 ' + (new Date().getMonth() + 1) + '월 ' + new Date().getDate() + '일';
+        let tel = '010-1234-5678';
+        let attention = '마카오를 방문하고자 하는 사람은 서류 필수 체크';
+        let extra = 200000;
+        let real = extra - 50000;
+        let basic = price * member;
+        let real_total = real * member;
+        let total = basic + real_total;
+        alert('여행지 명: ' + name + '\n' + '여행 경비: ' + price + '\n' + 
+        '여행 인원: ' + member + '\n' + '여행 일정: ' + date + '\n' + 
+        '여행사 연락처: ' + tel + '\n' + '여행 중 주의사항: ' + attention + '\n' + 
+        '예상 추가 경비: ' + extra + '\n' + '실제 추가 경비(1인): ' + real + '\n' + 
+        '총 회원 원래 경비: ' + basic + '\n' + '추가 경비(전체인원): ' + real_total + '\n' + 
+        '총 회원 최종 경비: ' + total + '원');
+    </script>
+    
+</body>
+</html>
