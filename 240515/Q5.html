@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+        let lotto = [];
+        for(let i = 0; i < 6; i++){
+            let num = Math.floor(Math.random() * 45) + 1;
+            if(lotto.indexOf(num) == -1){ // 중복된 숫자가 없을 때
+                lotto.push(num);
+            }else{ // 중복된 숫자가 있을 때
+                i--;
+            }
+        }
+        document.write('복권번호: [' + lotto + ']');
+    </script>
+    
+</body>
+</html>

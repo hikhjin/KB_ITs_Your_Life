@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <button onclick="run();">promise 시작</button>
+    <p id="p1"></p>
+    <script>
+        element = document.getElementById('p1');
+        function run() {
+            const promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('너의 이름은?');
+                }, 1000);
+            });
+
+            //연속적인 비동기 작업을 처리하기 위해선 then chain으로 설계한다
+            promise.then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg +'<br>';
+                return '홍길동'; //return 값은 다음 then으로 전달된다.
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+                return '너가 가고 싶은 곳은?'; 
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML +=  msg + '<br>';
+                return '일본'; 
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+                return '홍길동은 일본에 가길 원한다.'; 
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+            }).catch((error) => {
+                console.log(error);
+                element.innerHTML += 'error: ' + error + '<br>'; // 에러 발생 시 해당 문구 출력
+            });
+        }
+        
+    </script>
+    
+</body>
+</html>

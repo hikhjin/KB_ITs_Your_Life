@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+    <button onclick="run();">promise 시작</button>
+    <p id="p1"></p>
+    <script>
+        const num1 = Math.floor(Math.random() * 10);
+        const num2 = Math.floor(Math.random() * 10);
+        let sum = num1 + num2;
+        let mul = num1 * num2;
+
+        element = document.getElementById('p1');
+        function run() {
+            const promise = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve('두 수를 랜덤하게 생성하여 더하여 리턴하시오.');
+                }, 1000);
+            });
+
+            //연속적인 비동기 작업을 처리하기 위해선 then chain으로 설계한다
+            promise.then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg +'<br>';
+                return sum; //return 값은 다음 then으로 전달된다.
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+                return '두 수를 랜덤하게 생성하여 곱하여 리턴하시오.'; 
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+                return sum + ', ' + mul;
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+                return '두 수의 합은 ' + sum + ', 두 수의 곱은 ' + mul + '입니다.'; 
+            }).then((msg) => {
+                console.log(msg);
+                element.innerHTML += msg + '<br>';
+            }).catch((error) => {
+                console.log(error);
+                element.innerHTML += 'error: ' + error + '<br>'; // 에러 발생 시 해당 문구 출력
+            });
+        }
+        
+    </script>
+    
+</body>
+</html>
