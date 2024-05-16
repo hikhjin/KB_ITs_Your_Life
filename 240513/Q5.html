@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5</title>
+</head>
+<body>
+    <script>
+        function addComment() {
+            const txt = document.getElementById("txt");
+            const comments = document.getElementById("comments");
+            const comment = document.createElement("div");
+            comment.innerHTML = txt.value + "<hr color='red'>";
+            comments.appendChild(comment);
+            txt.value = "";
+        }
+    </script>
+
+    <h2>그림을 본 느낌은?</h2>
+    <br>
+    <img src = pic2.png>
+    <br><br>
+    <input id = "txt">
+    <button onclick = "addComment()">댓글 달기</button>
+    <br><br>
+    <hr>
+    <div id = "comments"></div>
+
+</body>
+</html>

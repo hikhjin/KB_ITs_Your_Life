@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+</head>
+<body>
+    
+    <style>
+        #b1{
+            background-color: rgb(243, 183, 43);
+            
+        }
+        #b2{
+            background-color: rgb(10, 93, 236);
+            color: white;
+        }
+    
+        #result{
+            color: red;
+        }
+    </style>
+
+    <script>
+        function checkID() {
+            let id = document.getElementById("id").value
+            if (id == 'root' || id == 'admin' || id == 'apple') {
+                document.getElementById("result").innerText = "이미 사용중인 ID입니다. 다른 ID를 입력해주세요."
+            } else {
+                document.getElementById("result").innerText = "사용 가능한 ID입니다."
+            }
+        }
+
+        function checkPhone() {
+            let phone = document.getElementById("phone").value.substring(0, 3);
+            let nums = Math.floor(Math.random() * 1000) + 100;
+            if (phone == '010') {
+                document.getElementById("certi").innerText = "인증번호: 01" + nums;
+            } else if (phone == '011') {
+                document.getElementById("certi").innerText = "인증번호: 02" + nums;
+            } else {
+                document.getElementById("certi").innerText = "인증번호: 03" + nums;
+            }
+        }
+
+    </script>
+
+    ID 입력: 
+    <br>
+    <input id = "id">
+    <br><br>
+    <button id="b1" onclick = "checkID()">회원가입시 ID 중복 체크</button>
+    <div id="result"></div>
+    <br>
+
+    전화번호 입력:
+    <br>
+    <input id = "phone">
+    <br><br>
+    <button id="b2" onclick = "checkPhone()">인증번호 받기</button>
+    <div id="certi"></div>
+    
+</body>
+</html>

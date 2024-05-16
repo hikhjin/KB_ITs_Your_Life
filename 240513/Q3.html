@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+    <script>
+        function show_img(id) {
+            const img = document.getElementById("img");
+            switch (id) {
+                case 'img1':
+                    img.src = "pic2.png";
+                    break;
+                case 'img2':
+                    img.src = "pic3.png";
+                    break;
+                case 'img3':
+                    img.src = "pic2.jpeg";
+                    break;
+                default:
+                    break;
+            }
+        }
+
+    </script>
+    <table align="center">
+    <td>
+        <button onclick="show_img('img1')" style="background-color: lime; width: 400px;">제주도로</button>
+        <br>
+        <button onclick="show_img('img2')" style="background-color: orange; width: 400px;">일본으로</button>
+        <br>
+        <button onclick="show_img('img3')" style="background-color: purple; width: 400px;">하와이로</button>
+        <hr color="red" width="400">
+        <h3>힘들다, 우리도 떠나자!</h3>
+        <hr color="red" width="400">
+        <img src="pic4.png" id="img" width="400" height="250">
+        
+    </td>
+
+    
+    
+
+
+    
+</body>
+</html>

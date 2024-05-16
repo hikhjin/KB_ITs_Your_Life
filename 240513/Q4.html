@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+</head>
+<body>
+    <script>
+        function pay() {
+            let shop = document.getElementById("shop").value;
+            let price = document.getElementById("price").value;
+            let method = document.getElementById("method").value;
+            let total = 0;
+            if (method == 1) {
+                total = parseInt(price);
+            } else if (method == 2) {
+                total = parseInt(price) + 1000;
+            } else if (method == 3) {
+                total = parseInt(price) + 500;
+            }
+            document.getElementById("total").innerText = shop + "에서 최종 결제금액: " + total + "원";
+        }
+
+    </script>
+
+    <style>
+        #shop, #price{
+            background-color: yellow;
+        }
+        
+        button{
+            background-color: lime;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+    
+    구매상점 입력: <input id = "shop" value = "">
+    <br><br>
+
+    결제 금액 입력: <input id = "price" value = "">
+    <br>
+    <hr color="red">
+
+    결제 수단 선택:
+    <select id="method">
+        <option value="1">계좌이체</option>
+        <option value="2">신용카드</option>
+        <option value="3">휴대폰 결제</option>
+    </select>
+    <br>
+    <hr color="red">
+    <button onclick = "pay()">결제 금액 계산</button>
+    <br>
+    <div id = "total"></div>
+</body>
+</html>

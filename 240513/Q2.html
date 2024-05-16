@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+</head>
+<body>
+
+    <script>
+        function id_check() {
+            let id = document.getElementById("user_id").value;
+            if (id.length < 5) {
+                alert("5 미만입니다. 다시 입력해주세요.");
+            }
+        }
+
+        function password_check() {
+            let password = document.getElementById("password").value;
+            let password2 = document.getElementById("password2").value;
+            if (password == password2) {
+                document.getElementById("result").innerHTML = "패스워드 일치<br><img src='pic3.png' width='100' height='100'>";
+            } else {
+                document.getElementById("result").innerHTML = "패스워드 불일치<br><img src='pic2.jpeg' width='100' height='100'>";
+            }
+        }
+    </script>
+
+    아이디 입력: <input id = "user_id" value = "">
+    <button onclick = "id_check()">아이디 체크</button>
+    <br>
+    <hr>
+
+    패스워드: <input id = "password" value = "">
+    <br>
+
+    패스워드 확인: <input id = "password2" value = "">
+    <button onclick = "password_check()">확인</button>
+    <br>
+    <div id = "result"></div>
+    
+</body>
+</html>

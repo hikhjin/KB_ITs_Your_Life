@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <script>
+        function id_check() {
+            let id = document.getElementById("user_id").value;
+            if (id == "root") {
+                document.getElementById("result").innerHTML = "로그인 성공";
+            } else {
+                document.getElementById("result").innerHTML = "로그인 실패";
+            }
+        }
+
+        function find() {
+            let txt = document.getElementById("find").value;
+            let url = "https://kin.naver.com/search/list.naver?query=" + txt;
+            window.open(url);
+        }
+
+        function webtoon() {
+            let txt = document.getElementById("webtoon").value;
+            let url = "https://comic.naver.com/search?keyword=" + txt;
+            window.open(url);
+        }
+    </script>
+
+    아이디 <input id = "user_id" value = "">
+    <button onclick = "id_check()">아이디 체크</button>
+    <br>
+    <div id = "result"></div>
+    <br>
+    <hr><br>
+
+    지식인 검색어 <input id = "find" value = "">
+    <button onclick = "find()">지식인 검색</button>
+    <br>
+    <hr><br>
+
+    보고 싶은 웹툰 입력 <input id = "webtoon" value = "">
+    <button onclick = "webtoon()">웹툰 검색</button>
+    <br>
+    
+</body>
+</html>
