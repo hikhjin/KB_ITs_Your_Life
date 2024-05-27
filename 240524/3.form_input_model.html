@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+</head>
+<body>
+    <h3>1. v-model (component two-way binding) </h3>
+    <div>- vue에서 컴포넌트 기반으로 양방향 상호 작용이 가능한 문법 </div>
+    <div>- 이벤트를 통해 변경된 값을 감지하여 vue(VDOM) 내부 변수와 양방향 바인딩 </div>
+    <div>- https://ko.vuejs.org/guide/essentials/forms.html</div>
+    <br>
+
+    <div id="app">
+        <input type="text" v-model="inputValue">
+        <br>
+        입력한 내용 : <span>{{inputValue}}</span>
+    </div>
+    <script type="text/javascript">
+        var vm = Vue.createApp({
+            name: "App",
+            data() {
+                return { inputValue: "" };
+            },
+        }).mount("#app");
+    </script>
+    <hr><br>
+
+    <h3>checkbox/radio/select layout 적용</h3>
+    <div id="app2">
+        <h4>취미 생활</h4>
+        <input type="checkbox" id="hobby1" value="A" v-model="hobby">
+        <label for="hobby1">등산</label><br>
+        <input type="checkbox" id="hobby2" value="B" v-model="hobby">
+        <label for="hobby2">운동</label><br>
+        <input type="checkbox" id="hobby3" value="C" v-model="hobby">
+        <label for="hobby3">독서</label><br>
+        <input type="checkbox" id="hobby4" value="D" v-model="hobby">
+        <label for="hobby4">영화보기</label>
+        <br><br>
+
+        <div>
+            선택한 취미 : {{hobby.sort().join(', ')}}<br>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+            var vm = Vue.createApp({
+                name: "App",
+                data() {
+                    return {
+                        hobby: [],
+                    };
+                },
+            }).mount("#app2");
+    </script>
+    <hr><br>
+
+    
+</body>
+</html>
