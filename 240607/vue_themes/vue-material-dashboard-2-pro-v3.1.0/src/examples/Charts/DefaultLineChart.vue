@@ -32,8 +32,6 @@ export default {
     var gradientStroke2 = chart.createLinearGradient(0, 230, 0, 50);
 
     gradientStroke2.addColorStop(1, "rgba(20,23,39,0.2)");
-    gradientStroke2.addColorStop(0.2, "rgba(72,72,176,0.0)");
-    gradientStroke2.addColorStop(0, "rgba(20,23,39,0)");
 
     let chartStatus = Chart.getChart(this.id);
     if (chartStatus != undefined) {
@@ -56,32 +54,6 @@ export default {
               borderWidth: 3,
               backgroundColor: gradientStroke2,
               data: this.chart.datasets[0].data,
-              maxBarThickness: 6,
-            },
-            {
-              label: this.chart.datasets[1].label,
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 2,
-              pointBackgroundColor: "#3A416F",
-              borderColor: "#3A416F",
-              // eslint-disable-next-line no-dupe-keys
-              borderWidth: 3,
-              backgroundColor: gradientStroke2,
-              data: this.chart.datasets[1].data,
-              maxBarThickness: 6,
-            },
-            {
-              label: this.chart.datasets[2].label,
-              tension: 0.4,
-              borderWidth: 0,
-              pointRadius: 2,
-              pointBackgroundColor: "#17c1e8",
-              borderColor: "#17c1e8",
-              // eslint-disable-next-line no-dupe-keys
-              borderWidth: 3,
-              backgroundColor: gradientStroke2,
-              data: this.chart.datasets[2].data,
               maxBarThickness: 6,
             },
           ],

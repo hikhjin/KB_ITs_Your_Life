@@ -4,7 +4,7 @@
     class="page-header bg-gradient-dark position-relative m-3 border-radius-xl min-vh-50"
   >
     <img
-      src="../../assets/img/bg-pricing.jpg"
+      src="../../assets/img/banner.png"
       alt="pattern-lines"
       class="page-header top-0 position-absolute opacity-8 start-0 w-100"
     />
@@ -12,9 +12,9 @@
     <div class="container py-10 postion-relative z-index-2">
       <div class="row">
         <div class="col-md-6 mx-auto text-center">
-          <h2 class="text-white">Pick the best plan for you</h2>
+          <h2 class="text-white">당신을 위한 가계부</h2>
           <p class="text-white">
-            You have Free Unlimited Updates and Premium Support on each package.
+            여러 데이터를 한 눈에 확인하세요.
           </p>
         </div>
       </div>

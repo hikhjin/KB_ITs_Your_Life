@@ -2,6 +2,66 @@
   <div class="py-4 container-fluid">
     <div class="row">
       <div class="col-lg-12 position-relative z-index-2">
+
+        <div class="text-center">
+          <img src="../../assets/img/main.jpg" alt="Dashboard" class="img-fluid full-width" />
+        </div>
+        <br><br>
+
+        <!-- 자산 내역 그래프-->
+
+        <div class="col-12">
+          <div class="card z-index-2 mt-4">
+            <div class="card-header p-3 pt-2">
+              <div class="text-center border-radius-xl mt-n4 me-3 float-start"></div>
+              <div class="d-block d-md-flex">
+                <div class="me-auto">
+                  <h6 class="mb-0">오늘까지 40만원 벌었어요</h6>
+                </div>
+                <span class="badge badge-lg badge-dot me-4 d-inline-block text-start">
+                  <i class="bg-success"></i>
+                  <span class="text-dark">남은 자산</span>
+                </span>
+                <span class="badge badge-lg badge-dot me-4 d-inline-block text-start">
+                  <i class="bg-dark"></i>
+                  <span class="text-dark">투자 이익</span>
+                </span>
+              </div>
+            </div>
+            <div class="p-3 card-body">
+              <div class="chart">
+                <default-line-chart
+                  id="line-chart"
+                  title="Line chart"
+                  :chart="{
+                    labels: [
+                      'Apr',
+                      'May',
+                      'Jun',
+                      'Jul',
+                      'Aug',
+                      'Sep',
+                      'Oct',
+                      'Nov',
+                      'Dec'
+                    ],
+                    datasets: [
+                      {
+                        label: '남은 자산',
+                        data: [50, 40, 30, 22, 50, 20, 40, 23, 50]
+                      },
+                      {
+                        label: '투자 이익',
+                        data: [30, 90, 40, 140, 290, 290, 340, 230, 400]
+                      }
+                    ]
+                  }"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
         <sales-table-card
           title="Sales by Country"
           :rows="[
@@ -196,6 +256,7 @@
     <div class="row"></div>
   </div>
 </template>
+
 <script>
 import SalesTableCard from "./components/SalesTableCard.vue";
 import ChartHolderCard from "./components/ChartHolderCard.vue";
@@ -212,6 +273,9 @@ import booking1 from "../../assets/img/products/product-1-min.jpg";
 import booking2 from "../../assets/img/products/product-2-min.jpg";
 import booking3 from "../../assets/img/products/product-3-min.jpg";
 
+import DefaultLineChart from "@/examples/Charts/DefaultLineChart.vue";
+
+
 export default {
   name: "DashboardDefault",
   components: {
@@ -221,6 +285,7 @@ export default {
     ReportsLineChart,
     MiniStatisticsCard,
     BookingCard,
+    DefaultLineChart,
   },
   data() {
     return {
@@ -235,3 +300,10 @@ export default {
   },
 };
 </script>
+
+<style>
+.full-width {
+  width: 100%;
+  height: auto;
+}
+</style>

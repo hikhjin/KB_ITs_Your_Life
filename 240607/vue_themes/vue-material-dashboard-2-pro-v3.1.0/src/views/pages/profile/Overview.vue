@@ -201,6 +201,7 @@
                 <h6 class="text-xs text-uppercase text-body font-weight-bolder">
                   Account
                 </h6>
+              
                 <ul class="list-group">
                   <li class="px-0 border-0 list-group-item">
                     <material-switch
@@ -583,6 +584,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import setNavPills from "@/assets/js/nav-pills.js";
 import setTooltip from "@/assets/js/tooltip.js";
+
 
 export default {
   name: "ProfileOverview",
